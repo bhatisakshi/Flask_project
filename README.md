@@ -6,12 +6,6 @@ A simple blog application built using Flask and Flask-Restx.<br> This project de
 - User login and logout
 - Create, view, and delete blog posts
   
-## Requirements
-- Flask
-- Flask-Restx
-- Flask-SQLAlchemy
-- pytest
-
 ## Installation
 
 ### Prerequisites
@@ -20,8 +14,8 @@ A simple blog application built using Flask and Flask-Restx.<br> This project de
 
 **Clone the repository:**
 ```bash
-git clone https://github.com/bhatisakshi/flask-blog.git
-cd flask-blog
+git clone https://github.com/bhatisakshi/Flask_project.git
+cd Flask_project
 ```
 
 **Create and activate a virtual environment:**
@@ -29,10 +23,12 @@ cd flask-blog
 virtualenv venv
 source venv/bin/activate 
 ```
+
 **Install the dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
+
 
 ## Project Setup
 
