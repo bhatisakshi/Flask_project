@@ -28,4 +28,4 @@ class Post(db.Model):
         }
         
     def __repr__(self):
-        return f'<BlogPost {self.title}>'
+        return f'<Post {self.title}>'
