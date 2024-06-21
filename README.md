@@ -16,18 +16,18 @@ A simple blog application built using Flask and Flask-Restx.<br> This project de
 
 ### Prerequisites
 - Python 3.10 or higher
-- Virtual environment tool (recommended)
+- Virtual environment tool
 
 **Clone the repository:**
 ```bash
-git clone https://github.com/your-username/flask-blog.git
+git clone https://github.com/bhatisakshi/flask-blog.git
 cd flask-blog
 ```
 
 **Create and activate a virtual environment:**
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+virtualenv venv
+source venv/bin/activate 
 ```
 **Install the dependencies:**
 ```bash
@@ -38,15 +38,24 @@ pip install -r requirements.txt
 
 1. Initialize the database:
 ```bash
-flask db init
+flask init-db
 ```
-2. Run the application:
+2. Set up os environment variable:(in the root directory of .env file in your project or in the command prompt):
+```bash
+export FLASK_APP=flaskblog
+```
+3.  Run the application:
 ```bash
 flask run
 ```
-The application will be available at http://127.0.0.1:5000/.
+The application will be available at http://127.0.0.1:5000/
 
 ## Endpoints
+
+### Authentication Endpoints
+- POST /auth/register: Register a new user
+- POST /auth/login: Log in a user
+- POST /auth/logout: Log out a user
 
 ### Blog Endpoints
 - GET /blog/posts: List all posts
@@ -54,11 +63,6 @@ The application will be available at http://127.0.0.1:5000/.
 - GET /blog/posts/int:id: Fetch a single post by id
 - PUT /blog/posts/int:id: Update a post by id
 - DELETE /blog/posts/int:id: Delete a post by id
-
-### Authentication Endpoints
-- POST /auth/register: Register a new user
-- POST /auth/login: Log in a user
-- POST /auth/logout: Log out a user
 
 ## Testing
 To run the tests, use pytest:
