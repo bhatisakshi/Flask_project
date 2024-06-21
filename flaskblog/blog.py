@@ -2,9 +2,13 @@ from flask import Blueprint, request, jsonify
 from flask_restx import Namespace, Resource, fields
 from .models import db, Post
 
+#create blueprint for blog routes
 blog = Blueprint('blog', __name__)
+
+#create namespace for Flask-RestX API
 api = Namespace('blog', description='Blog operations')
 
+#post schema for input validation
 post_model = api.model('Post', {
     'title': fields.String(required=True, description='Post title'),
     'content': fields.String(required=True, description='Post content'),
